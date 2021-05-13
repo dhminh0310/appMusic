@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.example.mp3player.Fragment.FragmentAdvertisiment"
+            android:id="@+id/fragmentAdvertisiment"/>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:name="com.example.mp3player.Fragment.FragmentPlaylist"
+            android:id="@+id/fragmentPlaylist"/>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:name="com.example.mp3player.Fragment.FragmentAlbum"
+            android:id="@+id/fragmentAlbum"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Có thể bạn sẽ thích"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/songNameText"
+                android:id="@+id/textViewTitleSong"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitleSong"
+                android:id="@+id/recyclerFavoriteSong"
+
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

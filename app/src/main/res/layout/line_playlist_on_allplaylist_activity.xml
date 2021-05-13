@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:id="@+id/imageViewAllPlaylistImage"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewAllPlaylistName"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Ten playlist"
+        android:textColor="@color/songNameText"
+        android:layout_below="@id/imageViewAllPlaylistImage"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        />
+
+</RelativeLayout>

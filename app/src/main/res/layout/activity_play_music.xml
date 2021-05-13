@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.PlayMusicActivity"
+    android:background="#7B43AD">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolBarPlayMusic"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        />
+    
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBarPlayMusic"
+        android:id="@+id/viewPagerPlayMusic"
+        android:layout_above="@id/layoutPlaymusic"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutPlaymusic"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:id="@+id/textViewCurrentTimeSong"
+                android:text="00:00"
+                android:textSize="15sp"/>
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:id="@+id/seekBarPlaySong"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:id="@+id/textViewTotalTimeSong"
+                android:text="00:00"
+                android:textSize="15sp"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/iconsuffle"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:id="@+id/imgbtnShuffle"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/iconpreview"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:id="@+id/imgbtnPreview"
+                android:scaleType="centerInside"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/iconplay"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:id="@+id/imgbtnPlay"
+                android:scaleType="centerInside"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/iconnext"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:id="@+id/imgbtnNext"
+                android:scaleType="centerInside"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/iconrepeat"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:id="@+id/imgbtnRepeat"
+                android:scaleType="centerInside"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>
